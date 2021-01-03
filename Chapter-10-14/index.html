@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 10-14</title>
+</head>
+
+<body style="text-align: center;">
+    <button onclick=Calculator()>Calculator</button>
+    <button onclick=Percentage_Calculator()>Percentage Calculator</button>
+    <script>
+        function Calculator() {
+            var firstNumber = prompt("Enter Your First Number");
+            var secoundNumber = prompt("Enter Your Second Number");
+            var operator = prompt("Enter Your the operator");
+
+            if (operator == '+')
+                alert(firstNumber + secoundNumber);
+            else if (operator == '-')
+                alert(firstNumber + operator + secoundNumber);
+            else if (operator == '*')
+                alert(firstNumber * secoundNumber);
+            else if (operator == '/')
+                alert(firstNumber / secoundNumber);
+            else if (operator == '%')
+                alert(firstNumber % secoundNumber);
+            else
+                alert("Please Enter the Correct Operator");
+        }
+        function Percentage_Calculator(){
+            var englishNumber = parseInt(prompt("Enter Your English Marks"));
+            var computerNumber = parseInt(prompt("Enter Your Computer Marks"));
+            var physicsNumber = parseInt(prompt("Enter Your Physics Marks"));
+            var urduNumber = parseInt(prompt("Enter Your Urdu Marks"));
+            var mathNumber = parseInt(prompt("Enter Your Math Marks"));
+
+            var obtainMarks = englishNumber+computerNumber+physicsNumber+urduNumber+mathNumber;
+            var totalMarks = 500;
+
+            var result = obtainMarks/totalMarks*100;
+            alert("Your Percentage is: "+result+"%");
+        }
+    </script>
+</body>
+
+</html>

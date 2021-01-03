@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 15-16-17</title>
+</head>
+
+<body style="text-align: center;">
+    <button onclick=EditCourse()>Edit Course Names</button>
+    <script>
+        var courses = [];
+        course1 = prompt("Enter Your 1st Course Name");
+        courses.push(course1);
+        course2 = prompt("Enter Your 2nd Course Name");
+        courses.push(course2);
+        course3 = prompt("Enter Your 3rd Course Name");
+        courses.push(course3);
+        course4 = prompt("Enter Your 4th Course Name");
+        courses.push(course4);
+        course5 = prompt("Enter Your 5th Course Name");
+        courses.push(course5);
+
+        alert(courses);
+
+        function EditCourse() {
+            course1ValueEdit = prompt(course1 + ": Edit this course: ");
+            courses.splice(0, 1, course1ValueEdit);
+            course2ValueEdit = prompt(course2 + ": Edit this course: ");
+            courses.splice(1, 1, course2ValueEdit);
+            course3ValueEdit = prompt(course3 + ": Edit this course: ");
+            courses.splice(2, 1, course3ValueEdit);
+            course4ValueEdit = prompt(course4 + ": Edit this course: ");
+            courses.splice(3, 1, course4ValueEdit);
+            course5ValueEdit = prompt(course5 + ": Edit this course: ");
+            courses.splice(4, 1, course5ValueEdit);
+
+            alert(courses);
+        }
+
+
+    </script>
+</body>
+
+</html>
