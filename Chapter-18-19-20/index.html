@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 15-16-17</title>
+</head>
+
+<body style="text-align: center;">
+	<h2> My Todo App </h2>
+    <button onclick=addTask()>Add Task</button>
+	<button onclick=viewTask()>View Tasks</button>
+	<button onclick=editTask()>Edit Tasks</button>
+	<button onclick=deleteTask()>Delete Tasks</button>
+    <script>
+		var tasks = [];
+        function addTask(){
+			task = prompt("Enter a New Task in your Todo List");
+			tasks.push(task);
+			alert("Task Added!!");
+		}
+		function viewTask(){
+			for(i=0;i<tasks.length;i++){
+				alert(`Task ${i} is: ${tasks[i]}`);
+				console.log(tasks[i]);
+			}
+		}
+		function editTask(id){
+			editTaskid = prompt("Enter Task No Where You want to change task");
+			editTask = prompt("Enter Task what you want to add on ID"+editTaskid);
+			if(editTaskid < tasks.length){
+				tasks[editTaskid] = editTask;
+				alert("Task Changed !!");
+			}
+			else{
+				alert("Please Enter The Value Task ID");
+			}
+			 
+		}
+		function deleteTask(){
+			editTaskid = prompt("Enter Task No that you want to delete");
+			if(editTaskid < tasks.length){
+				tasks[editTaskid] = '';
+				alert("Task Deleted !!");
+			}
+			else{
+				alert("Please Enter The Value Task ID");
+			}
+		}
+    </script>
+</body>
+
+</html>
